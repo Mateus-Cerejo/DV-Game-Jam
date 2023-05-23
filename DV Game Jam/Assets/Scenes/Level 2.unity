@@ -1694,10 +1694,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1580126218908629712, guid: 1b220183e35d42a48a63d8ea852599d2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -789
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580126218908629712, guid: 1b220183e35d42a48a63d8ea852599d2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -302
+      objectReference: {fileID: 0}
     - target: {fileID: 3686647143293849449, guid: 1b220183e35d42a48a63d8ea852599d2, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 482988928}
+    - target: {fileID: 4824572376777222008, guid: 1b220183e35d42a48a63d8ea852599d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6309500269833385205, guid: 1b220183e35d42a48a63d8ea852599d2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -350
+      objectReference: {fileID: 0}
     - target: {fileID: 6865610574747377749, guid: 1b220183e35d42a48a63d8ea852599d2, type: 3}
       propertyPath: m_Name
       value: Level UI
@@ -1784,6 +1800,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6865610574747377833, guid: 1b220183e35d42a48a63d8ea852599d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870382390326272511, guid: 1b220183e35d42a48a63d8ea852599d2, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8679719322139169164, guid: 1b220183e35d42a48a63d8ea852599d2, type: 3}

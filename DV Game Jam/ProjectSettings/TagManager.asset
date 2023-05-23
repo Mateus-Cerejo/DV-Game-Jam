@@ -6,6 +6,8 @@ TagManager:
   tags:
   - statBtn
   - Level UI
+  - Obstacle
+  - Slippery
   layers:
   - Default
   - TransparentFX
@@ -42,6 +44,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Slippery
+    uniqueID: 3646757187
     locked: 0
   - name: Inner Walls
     uniqueID: 3686072941

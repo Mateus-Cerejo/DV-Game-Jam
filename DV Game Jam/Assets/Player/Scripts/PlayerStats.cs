@@ -7,6 +7,7 @@ public class PlayerStats : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private int maxStats;
+    [SerializeField] private int statCap;
     [SerializeField] private TextMeshProUGUI strText;
     [SerializeField] private TextMeshProUGUI lifeText;
     [SerializeField] private TextMeshProUGUI sizeText;
@@ -81,16 +82,26 @@ public class PlayerStats : MonoBehaviour
             switch (statName)
             {
                 case "strenght":
-                    strStat++;
-                    availableStats--;
+                    if(strStat < statCap)
+                    {
+                        strStat++;
+                        availableStats--;
+                    }
+                    
                     break;
                 case "lifes":
-                    lifesStat++;
-                    availableStats--;
+                    if(lifesStat < statCap)
+                    {
+                        lifesStat++;
+                        availableStats--;
+                    }                  
                     break;
                 case "size":
-                    sizeStat++;
-                    availableStats--;
+                    if(sizeStat < statCap)
+                    {
+                        sizeStat++;
+                        availableStats--;
+                    }
                     break;
             }
             UpdateStatsUI();

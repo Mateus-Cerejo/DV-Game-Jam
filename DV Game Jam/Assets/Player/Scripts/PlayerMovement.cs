@@ -9,12 +9,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float force = 200;
     [SerializeField] Image forceBar;
 
+    [SerializeField]
+    private PhysicsMaterial2D icePhysicMaterial;
+
+    private PhysicsMaterial2D defaultPhysicMaterial;
+
     private Rigidbody2D rb;
     float mouseDistance;
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        defaultPhysicMaterial = rb.sharedMaterial;
         mouseDistance = 0;
     }
 
@@ -78,6 +84,23 @@ public class PlayerMovement : MonoBehaviour
         transform.up = direction;
 
         return mousePositionSTWP;
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Slippery")
+        {
+            rb.sharedMaterial = icePhysicMaterial;  
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Slippery")
+        {
+            rb.sharedMaterial = defaultPhysicMaterial;
+        }
     }
 
     public void SetForce(float newForce) { force = newForce; }

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd325b4d8c166a54cbe3aa7d40540e0b, type: 3}
   m_Name: BouncyWallSO
   m_EditorClassIdentifier: 
-  _force: 0
+  _force: 2

@@ -3043,6 +3043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   maxStats: 3
+  statCap: 3
   strText: {fileID: 6457709327346471472}
   lifeText: {fileID: 5266294113351526957}
   sizeText: {fileID: 1794862949710801632}

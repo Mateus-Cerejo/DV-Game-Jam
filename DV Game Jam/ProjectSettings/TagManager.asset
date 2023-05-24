@@ -8,6 +8,7 @@ TagManager:
   - Level UI
   - Obstacle
   - Slippery
+  - Level button
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - Outer Walls
   - Player
-  - 
+  - Post Processing
   - 
   - 
   - 

@@ -12,11 +12,13 @@ public class PauseMenu : MonoBehaviour
     }
     public void BackToMainMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Main Menu");
     }
 
     public void BackToLevels()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Levels");
     }
 }

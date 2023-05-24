@@ -29,8 +29,7 @@ public class LevelManager : MonoBehaviour
 
     public void NextLevel()
     {
-        string sceneName = SceneManager.GetActiveScene().name.Split(" ")[1];
-        SceneManager.LoadScene("Level " + (int.Parse(sceneName) + 1));
+        SceneManager.LoadScene("Level " + (int.Parse(SceneManager.GetActiveScene().name.Split(" ")[1]) + 1));
     }
         
     public void DisplayNextLevelBtn()

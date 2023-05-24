@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GoalBeahaviour : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class GoalBeahaviour : MonoBehaviour
                     GetComponent<ParticleSystem>().Play();
                     collision.GetComponent<PlayerScore>().Win();
                     levelUI.GetComponent<LevelManager>().DisplayNextLevelBtn();
+                    PlayerInfo.UpdateProgress(int.Parse(SceneManager.GetActiveScene().name.Split(" ")[1]) + 1);
                 }
             }
         }

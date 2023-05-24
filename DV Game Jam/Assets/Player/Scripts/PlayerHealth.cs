@@ -43,6 +43,7 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator Die()
     {
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         GetComponent<PlayerMovement>().enabled = false;
         //GetComponent<AudioSource>().PlayOneShot(deathSound);
         StartCoroutine(WaitForAnimationPlay("Die"));

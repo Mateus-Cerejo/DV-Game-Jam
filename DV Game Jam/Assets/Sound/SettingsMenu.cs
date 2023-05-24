@@ -11,14 +11,22 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] private Slider musiclider;
     [SerializeField] private Slider sfxSlider;
 
+    private void Start()
+    {
+        musiclider.value = PlayerPrefs.GetFloat("musicVolume");
+        sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume");
+    }
+
     public void changeMusicVolume(float value)
     {
         musicMixer.SetFloat("volume", value);
+        PlayerPrefs.SetFloat("musicVolume", value);
     }
 
     public void changeSFXVolume(float value)
     {
         musicMixer.SetFloat("volume", value);
+        PlayerPrefs.SetFloat("sfxVolume", value);
     }
 
     public void back()
